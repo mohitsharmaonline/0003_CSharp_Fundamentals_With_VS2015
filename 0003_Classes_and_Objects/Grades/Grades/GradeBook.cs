@@ -13,6 +13,11 @@ namespace Grades
             _grades = new List<float>();
         }
 
+        public GradeStatistics ComputeStatistics()
+        {
+            return new GradeStatistics();
+        }
+
         public void AddGrade(float grade)
         {
             _grades.Add(grade);
