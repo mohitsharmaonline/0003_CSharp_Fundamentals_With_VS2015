@@ -17,7 +17,7 @@ namespace Grades
             float sum = 0;
             foreach (float grade in _grades)
             {
-                //stats.HighestGrade = Math.Max(grade, stats.HighestGrade);
+                stats.HighestGrade = Math.Max(grade, stats.HighestGrade);
                 stats.LowestGrade = Math.Min(grade, stats.LowestGrade);
                 sum += grade;
             }
