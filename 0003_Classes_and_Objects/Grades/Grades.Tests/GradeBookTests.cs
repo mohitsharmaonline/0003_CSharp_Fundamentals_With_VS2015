@@ -42,7 +42,7 @@ namespace Grades.Tests
             book.AddGrade(75);
 
             GradeStatistics result = book.ComputeStatistics();
-            Assert.AreEqual(85.16, result.AverageGrade);
+            Assert.AreEqual(85.16, result.AverageGrade, 0.01);
         }
     }
 }
