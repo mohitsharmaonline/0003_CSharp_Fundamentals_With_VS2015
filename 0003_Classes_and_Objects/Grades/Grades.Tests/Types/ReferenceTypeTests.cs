@@ -44,12 +44,29 @@ namespace Grades.Tests.Types
             Assert.AreNotEqual("A GradeBook", book1.Name);
         }
 
+        [TestMethod]
+        public void ReferenceTypesPassByValue_3()
+        {
+            GradeBook book1 = new GradeBook();
+            GradeBook book2 = book1;
+
+            GiveBookAName_3(ref book2);
+            Assert.AreEqual("A GradeBook", book2.Name);
+            Assert.AreNotEqual("A GradeBook", book1.Name);
+        }
+
         private void GiveBookAName(GradeBook book)
         {
             book.Name = "A GradeBook";
         }
 
         private void GiveBookAName_2(GradeBook book)
+        {
+            book = new GradeBook();
+            book.Name = "A GradeBook";
+        }
+
+        private void GiveBookAName_3(ref GradeBook book)
         {
             book = new GradeBook();
             book.Name = "A GradeBook";
