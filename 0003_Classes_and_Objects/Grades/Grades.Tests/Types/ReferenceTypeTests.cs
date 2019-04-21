@@ -11,7 +11,7 @@ namespace Grades.Tests.Types
     public class ReferenceTypeTests
     {
         [TestMethod]
-        public void VariablesHoldsAReference()
+        public void GradebookVariablesHoldsAReference()
         {
             GradeBook g1 = new GradeBook();
             GradeBook g2 = g1;
