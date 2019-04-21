@@ -11,6 +11,20 @@ namespace Grades.Tests.Types
     public class TypeTests
     {
         [TestMethod]
+        public void ValueTypesPassByReference()
+        {
+            int x = 46;
+            IncreamentNumber(x);
+
+            Assert.AreEqual(46, x);
+        }
+
+        private void IncreamentNumber(int number)
+        {
+            number += 1;
+        }
+
+        [TestMethod]
         public void ReferenceTypesPassByValue()
         {
             GradeBook book1 = new GradeBook();
@@ -20,8 +34,24 @@ namespace Grades.Tests.Types
             Assert.AreEqual("A GradeBook", book1.Name);
         }
 
+        [TestMethod]
+        public void ReferenceTypesPassByValue_2()
+        {
+            GradeBook book1 = new GradeBook();
+            GradeBook book2 = book1;
+
+            GiveBookAName_2(book2);
+            Assert.AreNotEqual("A GradeBook", book1.Name);
+        }
+
         private void GiveBookAName(GradeBook book)
         {
+            book.Name = "A GradeBook";
+        }
+
+        private void GiveBookAName_2(GradeBook book)
+        {
+            book = new GradeBook();
             book.Name = "A GradeBook";
         }
 
