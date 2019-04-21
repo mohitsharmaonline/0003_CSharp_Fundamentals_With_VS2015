@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Grades.Tests.Types
 {
     [TestClass]
-    public class ReferenceTypeTests
+    public class TypeTests
     {
         [TestMethod]
         public void StringComparisons()
