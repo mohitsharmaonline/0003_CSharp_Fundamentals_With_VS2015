@@ -17,7 +17,7 @@ namespace Grades.Tests.Types
             int x2 = x1;
 
             x1 = 4;
-            Assert.AreEqual(x1, x2);
+            Assert.AreNotEqual(x1, x2);
         }
 
         [TestMethod]
