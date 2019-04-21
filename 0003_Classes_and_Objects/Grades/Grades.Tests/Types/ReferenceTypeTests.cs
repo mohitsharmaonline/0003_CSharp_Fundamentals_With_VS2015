@@ -11,6 +11,16 @@ namespace Grades.Tests.Types
     public class ReferenceTypeTests
     {
         [TestMethod]
+        public void IntVariablesHoldsAValue()
+        {
+            int x1 = 100;
+            int x2 = x1;
+
+            x1 = 4;
+            Assert.AreEqual(x1, x2);
+        }
+
+        [TestMethod]
         public void GradebookVariablesHoldsAReference()
         {
             GradeBook g1 = new GradeBook();
