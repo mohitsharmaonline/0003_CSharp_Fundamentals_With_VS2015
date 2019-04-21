@@ -19,7 +19,21 @@ namespace Grades.Tests.Types
             Assert.AreEqual(46, x);
         }
 
+        [TestMethod]
+        public void ValueTypesPassByReference_1()
+        {
+            int x = 46;
+            IncreamentNumber_1(ref x);
+
+            Assert.AreEqual(47, x);
+        }
+
         private void IncreamentNumber(int number)
+        {
+            number += 1;
+        }
+
+        private void IncreamentNumber_1(ref int number)
         {
             number += 1;
         }
