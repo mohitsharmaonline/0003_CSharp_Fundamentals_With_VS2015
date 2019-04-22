@@ -33,9 +33,20 @@ namespace Grades
 
         public string Name
         {
-            get;
-            set;
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                if (!string.IsNullOrWhiteSpace(value))
+                {
+                    _name = value;
+                }
+            }
         }
+
+        private string _name;
 
         List<float> _grades;
     }
