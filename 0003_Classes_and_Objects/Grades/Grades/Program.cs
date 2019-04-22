@@ -19,7 +19,7 @@ namespace Grades
             WriteResult("Average", statistics.AverageGrade);
             WriteResult("Highest", (int)statistics.HighestGrade);
             WriteResult("Lowest", statistics.LowestGrade);
-            WriteResult("Anything", statistics.HighestGrade, 2, 4, 6);
+            //WriteResult("Anything", statistics.HighestGrade, 2, 4, 6);
         }
 
         static void WriteResult(string description, int result)
@@ -32,9 +32,9 @@ namespace Grades
             Console.WriteLine(description +": " + result);
         }
 
-        static void WriteResult(string description, params float[] result)
-        {
-            Console.WriteLine(description + ": " + result);
-        }
+        //static void WriteResult(string description, params float[] result)
+        //{
+        //    Console.WriteLine(description + ": " + result);
+        //}
     }
 }
