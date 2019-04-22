@@ -11,15 +11,16 @@ namespace Grades
         static void Main(string[] args)
         {
             GradeBook book = new GradeBook();
+            book.Name = "Scott's Grade Book";
             book.AddGrade(91);
             book.AddGrade(89.5f);
             book.AddGrade(75);
 
             GradeStatistics statistics = book.ComputeStatistics();
+            Console.WriteLine(book.Name);
             WriteResult("Average", statistics.AverageGrade);
             WriteResult("Highest", (int)statistics.HighestGrade);
             WriteResult("Lowest", statistics.LowestGrade);
-            //WriteResult("Anything", statistics.HighestGrade, 2, 4, 6);
         }
 
         static void WriteResult(string description, int result)
@@ -31,10 +32,5 @@ namespace Grades
         {
             Console.WriteLine($"{description}: {result:F2}");
         }
-
-        //static void WriteResult(string description, params float[] result)
-        //{
-        //    Console.WriteLine(description + ": " + result);
-        //}
     }
 }
