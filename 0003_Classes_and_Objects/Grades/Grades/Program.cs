@@ -17,8 +17,13 @@ namespace Grades
 
             GradeStatistics statistics = book.ComputeStatistics();
             WriteResult("Average", statistics.AverageGrade);
-            Console.WriteLine(statistics.HighestGrade);
+            WriteResult("Highest", (int)statistics.HighestGrade);
             Console.WriteLine(statistics.LowestGrade);
+        }
+
+        static void WriteResult(string description, int result)
+        {
+            Console.WriteLine(description + ": " + result);
         }
 
         static void WriteResult(string description, float result)
