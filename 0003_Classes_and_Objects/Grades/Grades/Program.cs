@@ -29,7 +29,7 @@ namespace Grades
 
         static void WriteResult(string description, float result)
         {
-            Console.WriteLine("{0}: {1:C}", description, result);
+            Console.WriteLine($"{description}: {result:F2}");
         }
 
         //static void WriteResult(string description, params float[] result)
