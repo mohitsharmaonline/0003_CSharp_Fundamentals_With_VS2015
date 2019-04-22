@@ -13,6 +13,7 @@ namespace Grades
             GradeBook book = new GradeBook();
             book.NameChanged = new NameChangedDelegate(OnNameChanged);
             book.Name = "Scott's Grade Book";
+            book.Name = "Grade Book";
             book.Name = null;
             book.AddGrade(91);
             book.AddGrade(89.5f);
@@ -29,7 +30,7 @@ namespace Grades
         {
             Console.WriteLine($"Gradebook is changing name from {existingName} to {newName}");
         }
-
+        
         static void WriteResult(string description, int result)
         {
             Console.WriteLine(description + ": " + result);
