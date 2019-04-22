@@ -31,7 +31,11 @@ namespace Grades
             _grades.Add(grade);
         }
 
-        public string Name;
+        public string Name
+        {
+            get;
+            set;
+        }
 
         List<float> _grades;
     }
