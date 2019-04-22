@@ -41,6 +41,10 @@ namespace Grades
             {
                 if (!string.IsNullOrWhiteSpace(value))
                 {
+                    if(_name != value)
+                    {
+                        // NameChanged(_name, value)
+                    }
                     _name = value;
                 }
             }
