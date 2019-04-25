@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Grades
 {
@@ -17,11 +13,11 @@ namespace Grades
             book.AddGrade(75);
 
             GradeStatistics statistics = book.ComputeStatistics();
-            Console.WriteLine(book.Name);
+
             WriteResult("Average", statistics.AverageGrade);
             WriteResult("Highest", statistics.HighestGrade);
             WriteResult("Lowest", statistics.LowestGrade);
-            WriteResult("Grade", statistics.LetterGrade);
+            WriteResult(statistics.Description, statistics.LetterGrade);
         }
 
         static void WriteResult(string description, string result)
