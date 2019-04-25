@@ -30,9 +30,9 @@ namespace Grades
 
         internal void WriteGrades(TextWriter destination)
         {
-            for (int i = 0; i < _grades.Count; i++)
+            for (int i = _grades.Count; i > 0; i--)
             {
-                destination.WriteLine(_grades[i]);
+                destination.WriteLine(_grades[i-1]);
             }
         }
 
