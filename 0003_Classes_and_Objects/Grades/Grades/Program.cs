@@ -16,8 +16,12 @@ namespace Grades
             catch (ArgumentException ex)
             {
                 Console.WriteLine(ex.Message);
-            }            
-            
+            }
+            catch(Exception)
+            {
+                Console.WriteLine("Something went wrong!");
+            }
+                        
             book.AddGrade(91);
             book.AddGrade(89.5f);
             book.AddGrade(75);
