@@ -29,6 +29,7 @@ namespace Grades
 
             StreamWriter outputFile = File.CreateText("grades.txt");
             book.WriteGrades(outputFile);
+            outputFile.Close();
 
             GradeStatistics statistics = book.ComputeStatistics();
 
