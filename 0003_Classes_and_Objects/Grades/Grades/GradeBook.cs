@@ -32,7 +32,7 @@ namespace Grades
         {
             for (int i = _grades.Count; i > 0; i--)
             {
-                destination.WriteLine(_grades[i-1]);
+                destination.WriteLine(_grades[i - 1]);
             }
         }
 
@@ -49,15 +49,12 @@ namespace Grades
             }
             set
             {
-                if (!string.IsNullOrWhiteSpace(value))
+                if (_name != value && NameChanged != null)
                 {
-                    if(_name != value && NameChanged != null)
-                    {
-                        NameChangedEventArgs args = new NameChangedEventArgs { ExistingName = _name, NewName = value };
-                        NameChanged(this, args);
-                    }
-                    _name = value;
+                    NameChangedEventArgs args = new NameChangedEventArgs { ExistingName = _name, NewName = value };
+                    NameChanged(this, args);
                 }
+                _name = value;
             }
         }
 
