@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Grades
 {
@@ -25,7 +26,9 @@ namespace Grades
             book.AddGrade(91);
             book.AddGrade(89.5f);
             book.AddGrade(75);
-            book.WriteGrades(Console.Out);
+
+            StreamWriter outputFile = File.CreateText("grades.txt");
+            book.WriteGrades(outputFile);
 
             GradeStatistics statistics = book.ComputeStatistics();
 
