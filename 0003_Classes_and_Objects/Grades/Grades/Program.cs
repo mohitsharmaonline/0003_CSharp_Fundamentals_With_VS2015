@@ -7,14 +7,14 @@ namespace Grades
     {
         static void Main(string[] args)
         {
-            GradeBook book = new GradeBook();
+            ThrowAwayGradebook book = new ThrowAwayGradebook();
             //GetBookName(book);
             AddGrades(book);
             SaveGrades(book);
             WriteResults(book);
         }
 
-        private static void WriteResults(GradeBook book)
+        private static void WriteResults(ThrowAwayGradebook book)
         {
             GradeStatistics statistics = book.ComputeStatistics();
             WriteResult("Average", statistics.AverageGrade);
