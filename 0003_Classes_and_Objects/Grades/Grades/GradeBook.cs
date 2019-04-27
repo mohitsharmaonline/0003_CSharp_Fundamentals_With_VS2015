@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
@@ -41,7 +42,12 @@ namespace Grades
         public override void AddGrade(float grade)
         {
             _grades.Add(grade);
-        }        
+        }
+
+        public override IEnumerator GetEnumerator()
+        {
+            return _grades.GetEnumerator();
+        }
 
         protected List<float> _grades;
     }
