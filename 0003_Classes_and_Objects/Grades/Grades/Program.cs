@@ -8,7 +8,7 @@ namespace Grades
         static void Main(string[] args)
         {
             GradeBook book = new GradeBook();
-            GetBookName(book);
+            //GetBookName(book);
             AddGrades(book);
             SaveGrades(book);
             WriteResults(book);
